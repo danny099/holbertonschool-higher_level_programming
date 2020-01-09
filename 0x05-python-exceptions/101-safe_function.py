@@ -8,5 +8,5 @@ def safe_function(fct, *args):
     except BaseException as e:
         print("Exception: {}".format(e), file=stderr)
         res = None
-        finally:
-            turn res
+    finally:
+        return res
