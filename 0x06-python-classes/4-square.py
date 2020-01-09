@@ -10,7 +10,7 @@ class Square:
         Args:
              arg1 (size): size of square"""
         self.size = size
-    
+
     def area(self):
         """Return area"""
         return self.__size * self.__size
@@ -19,6 +19,7 @@ class Square:
     def size(self):
         """property"""
         return self.__size
+
     @size.setter
     def size(self, value):
         if not(isinstance(value, int)):
@@ -26,4 +27,3 @@ class Square:
         if(value < 0):
             raise ValueError("size must be >= 0")
         self.__size = value
-
