@@ -4,6 +4,7 @@
 
 class Rectangle:
     """pass"""
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -35,3 +36,26 @@ class Rectangle:
         if(value < 0):
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """area"""
+        area = self.__height * self.__width
+        return area
+
+    def perimeter(self):
+        """perimeter"""
+        if (self.__width == 0 or self.__height == 0):
+            return 0
+        perimeter = (self.__height * 2) + (self.__width * 2)
+        return perimeter
+
+    def __str__ (self):
+        """print"""
+        rectangle = ""
+        if self.__height == 0 or self.__width == 0:
+            return ""
+        for i in range(self.__height):
+            for j in range(self.width):
+                rectangle += "#"
+            rectangle += "\n"
+        return rectangle
