@@ -6,7 +6,7 @@ size"""
 
 
 def print_square(size):
-    """ print 
+    """ irint
     a
     square """
     if not isinstance(size, int):
