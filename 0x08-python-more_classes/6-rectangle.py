@@ -51,7 +51,7 @@ class Rectangle:
         perimeter = (self.__height * 2) + (self.__width * 2)
         return perimeter
 
-    def __str__ (self):
+    def __str__(self):
         """print"""
         rectangle = ""
         if self.__height == 0 or self.__width == 0:
@@ -61,11 +61,11 @@ class Rectangle:
                 rectangle += "#"
             rectangle += "\n"
         return rectangle
-    
+
     def __repr__(self):
         """repr"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
-    
+
     def __del__(self):
         """del"""
         type(self).number_of_instances -= 1
