@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" 
-add
+""" add
 two
 integers
+a + b
 """
 
 
