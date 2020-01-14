@@ -13,29 +13,20 @@ class Test(unittest.TestCase):
     .
     ."""
 
-    mensaje = "'>' not supported between instances of 'str' and 'int'"
+    def test1(self):
+        self.assertEqual(max_integer([9, -2, 30, -4]), 30)
+        self.assertEqual(max_integer([55]), 50)
+        self.assertEqual(max_integer([0, -45, -60]), 0)
+        self.assertEqual(max_integer([1, 2, 4, 10]), 10)
+        self.assertEqual(max_integer([1, 3, 40, 20]), 40)
+        self.assertEqual(max_integer([-2, -6, -8, -4]), -2)
 
-    def test_std(self):
-        a = [1, 3, 5]
-        self.assertEqual(max_integer(a), 5)
+    def test2(self):
+        self.assertEqual(max_integer([1, 2, 3, float('inf')]), float('inf'))
+        self.assertEqual(max_integer([1, 2, 30, float('nan')]), 30)
+        self.assertEqual(max_integer(), None)
+        self.assertEqual(max_integer("string"), 't')
+        self.assertEqual(max_integer((1, 2, 3, 40)), 40)
 
-    def negatives(self):
-        self.assertEqual(max_integer([-4, 5, -5]), 5)
-
-    def floats(self):
-        self.assertEqual(max_integer([5.65, 3, 8.493]), 8.493)
-
-    def lists(self):
-        a = [1, 2, 3]
-        b = [1, 9, 3]
-        c = [4, 2, 1]
-        d = [a, b, c]
-        self.assertEqual(max_integer(d), [4, 2, 1])
-
-    def tuples(self):
-        self.assertEqual(max_integer((14, 7, 12)), 14)
-
-    def test_wrong_type(self):
-        a = [6, 4, 'd', 6]
-        with self.assertRaises(TypeError, msg=self.mensaje):
-            max_integer(a)
+if __name__ == '__main__':
+    unittest.main()
