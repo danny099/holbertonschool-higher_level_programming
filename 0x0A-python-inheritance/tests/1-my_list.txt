@@ -25,3 +25,7 @@ TypeError: 'float' object is not iterable
 Traceback (most recent call last):
 ...
 TypeError: 'float' object is not iterable
+
+>>> test4_list = MyList('holi')
+>>> test4_list.print_sorted()
+['h', 'i', 'l', 'o']
