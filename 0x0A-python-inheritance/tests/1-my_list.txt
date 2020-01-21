@@ -35,3 +35,11 @@ TypeError: unorderable types: str() < int()
 >>> my_list = MyList(None)
 Traceback (most recent call last):
 TypeError: 'NoneType' object is not iterable
+
+>>> test4_list = MyList('holi')
+>>> test4_list.print_sorted()
+['h', 'i', 'l', 'o']
+
+
+
+
