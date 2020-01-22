@@ -19,7 +19,7 @@ class Student:
             except:
                 pass
         return dic
-    
+
     def reload_from_json(self, json):
         """json"""
         for i, val in json.items():
