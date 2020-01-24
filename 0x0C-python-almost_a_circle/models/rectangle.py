@@ -88,7 +88,7 @@ class Rectangle(Base):
         )
 
     def update(self, *args, **kwargs):
-        i = 0
+        i = 0git 
         for arg in args:
             i += 1
             if i == 1:
