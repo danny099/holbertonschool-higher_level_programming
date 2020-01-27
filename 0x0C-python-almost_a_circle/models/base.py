@@ -23,12 +23,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """to jsdon function"""
         if list_dictionaries is None:
             list_dictionaries = []
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """save function"""
         file = cls.__name__+".json"
         list = []
         for i in list_objs:
