@@ -5,6 +5,7 @@ module for Base class
 """
 
 
+import os
 import json
 
 
@@ -55,3 +56,12 @@ class Base:
             obj = cls(1)
         obj.update(**dictionary)
         return obj
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        file = cls.__name__ + ".json"
+        if not os.path.isfile(file):
+            return []
+        with open(file, "r") as f:
+            return [cls.create(**d) for d in cls.from_json_string(f.read())]
