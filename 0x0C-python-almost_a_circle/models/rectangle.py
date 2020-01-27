@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-is a reactangle class
+module for Reactangle class
 """
 
 
@@ -9,10 +9,10 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """is a Rectangle"""
+    """one base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        "init a rectangle"
+        """init a base"""
         self.__width = width
         self.__height = height
         self.__x = x
