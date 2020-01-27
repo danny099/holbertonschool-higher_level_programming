@@ -38,3 +38,10 @@ class Base:
                 list.append(cls.to_dictionary(i))
         with open(file, "w") as f:
             f.write(cls.to_json_string(list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """json to string"""
+        if json_string is None:
+            json_string = []
+        return json.loads(json_string)
