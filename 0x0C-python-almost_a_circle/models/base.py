@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 Base class
 """
@@ -9,6 +10,7 @@ import json
 
 class Base:
     """Base"""
+
     __nb_objects = 0
 
     def __init__(self, id=None):
