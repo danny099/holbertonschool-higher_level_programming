@@ -76,9 +76,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """area function"""
         return self.__width * self.__height
 
     def display(self):
+        """display function"""
         for y in range(self.__y):
             print("")
         for i in range(self.__height):
@@ -89,11 +91,13 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """str function"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height
         )
 
     def update(self, *args, **kwargs):
+        """update function"""
         i = 0
         for arg in args:
             i += 1
@@ -121,6 +125,7 @@ class Rectangle(Base):
                 self.__y = value
 
     def to_dictionary(self):
+        """to dictionary function"""
         dictionary = {}
         dictionary["id"] = self.id
         dictionary["width"] = self.width
