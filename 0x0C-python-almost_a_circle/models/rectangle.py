@@ -88,7 +88,7 @@ class Rectangle(Base):
         )
 
     def update(self, *args, **kwargs):
-        i = 0git 
+        i = 0
         for arg in args:
             i += 1
             if i == 1:
@@ -113,3 +113,12 @@ class Rectangle(Base):
                 self.__x = value
             if key == "y":
                 self.__y = value
+
+    def to_dictionary(self):
+        dictionary = {}
+        dictionary["id"] = self.id
+        dictionary["width"] = self.width
+        dictionary["height"] = self.height
+        dictionary["x"] = self.x
+        dictionary["y"] = self.y
+        return dictionary
