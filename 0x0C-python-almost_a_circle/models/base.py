@@ -33,7 +33,7 @@ class Base:
         """save function"""
         file = cls.__name__+".json"
         list = []
-        if list_objs
+        if list_objs:
             for i in list_objs:
                 list.append(cls.to_dictionary(i))
             with open(file, "w") as f:
