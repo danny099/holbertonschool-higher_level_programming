@@ -1,12 +1,16 @@
 #!/usr/bin/python3
-"""Reactangle class"""
+
+"""
+is a reactangle class
+"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Rectangle"""
+    """is a Rectangle"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        "init a rectangle"
         self.__width = width
         self.__height = height
         self.__x = x

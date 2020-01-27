@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-"""Square class"""
+"""
+is a Square class
+"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """is a square"""
     def __init__(self, size, x=0, y=0, id=None):
+        """init a square"""
         super().__init__(size, size, x, y, id)
         self.size = size
 
