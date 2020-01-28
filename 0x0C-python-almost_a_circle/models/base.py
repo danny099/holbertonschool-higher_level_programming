@@ -7,7 +7,6 @@ module for Base class
 
 import os
 import json
-import csv
 
 
 class Base:
@@ -66,22 +65,3 @@ class Base:
             return []
         with open(file, "r") as f:
             return [cls.create(**d) for d in cls.from_json_string(f.read())]
-    
-    @classmethod
-    def load_from_file_csv(cls):
-        """Return a list of instances. - Task 21"""
-        file = cls.__name__ + '.csv'
-        list = []
-        if os.path.isfile(file):
-            with open(file, 'r') as f:
-                reader = csv.reader(f)
-                for i in reader:
-                    if cls.__name__ == 'Rectangle':
-                        value = {'id': int(i[0]), 'width': int(i[1]),
-                               'height': int(i[2]), 'x': int(i[3]),
-                               'y': int(i[4])}
-                    else:
-                        value = {'id': int(i[0]), 'size': int(i[1]),
-                               'x': int(i[2]), 'y': int(i[3])}
-                    list.append(cls.create(**value))
-        return list
