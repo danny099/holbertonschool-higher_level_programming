@@ -8,9 +8,11 @@ if __name__ == "__main__":
     passwd = argv[2]
     db = argv[3]
     state = argv[4]
-    conectDB = MySQLdb.connect(host='localhost', user=user, passwd=passwd, db=db, port=3306)
+    conectDB = MySQLdb.connect(
+        host='localhost', user=user, passwd=passwd, db=db, port=3306)
     cur = conectDB.cursor()
-    cur.execute("SELECT * FROM states where name = '{}' ORDER BY states.id;".format(state))
+    cur.execute("""SELECT * FROM states
+        where BINARY name='{}' ORDER BY states.id""".format(state))
     states = cur.fetchall()
     for i in states:
         print(i)
