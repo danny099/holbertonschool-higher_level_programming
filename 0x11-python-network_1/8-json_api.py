@@ -6,7 +6,7 @@ if __name__ == "__main__":
     if len(argv) >= 2:
         data = {'q': '{}'.format(argv[1])}
     else:
-        data = {'q': ''}
+        data = {'q': '""'}
     r = requests.post('http://0.0.0.0:5000/search_user', data=data)
     user = r.json()
     try:
