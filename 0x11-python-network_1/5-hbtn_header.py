@@ -5,4 +5,4 @@ from sys import argv
 if __name__ == "__main__":
     url = argv[1]
     header = requests.get(url)
-    print(header.headers['X-Request-Id'])
+    print(header.headers.get('X-Request-Id'))
