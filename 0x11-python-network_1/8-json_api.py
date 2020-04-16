@@ -4,10 +4,11 @@ import requests
 from sys import argv
 if __name__ == "__main__":
     if len(argv) == 1:
-        data = {'q': ''}
+        letter = argv[1]
     else:
-        data = {'q': '{}'.format(argv[1])}
-    r = requests.post('http://0.0.0.0:5000/search_user', data=data)
+        letter = ''
+    r = requests.post('http://0.0.0.0:5000/search_user',
+                      data={'q': '{}'.format(letter)})
     user = r.json()
     try:
         if user:
