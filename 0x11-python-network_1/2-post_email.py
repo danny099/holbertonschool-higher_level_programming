@@ -11,4 +11,4 @@ if __name__ == "__main__":
     req = urllib.request.Request(url, data)
     with urllib.request.urlopen(req) as response:
         email = response.read()
-    print(email)
+    print(email.decode('utf-8'))
