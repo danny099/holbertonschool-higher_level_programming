@@ -1,12 +1,9 @@
 #!/usr/bin/node
-let count = 0;
-process.argv.forEach((value, i) => {
-  count = i;
-});
+const count = process.argv.length;
 
-if (count <= 1) {
+if (count <= 2) {
   console.log('No argument');
-} else if (count === 2) {
+} else if (count === 3) {
   console.log('Argument found');
 } else {
   console.log('Arguments found');
