@@ -20,3 +20,5 @@ class Rectangle {
     console.log(rectangle);
   }
 }
+
+module.exports = Rectangle;
