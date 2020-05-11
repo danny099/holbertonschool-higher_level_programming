@@ -6,7 +6,7 @@ class Square extends square {
     super(size, size);
   }
 
-  charPrint(c){
+  charPrint (c) {
     let rectangle = '';
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
@@ -14,7 +14,7 @@ class Square extends square {
           rectangle += c;
         } else {
           rectangle += 'X';
-        }   
+        }
       }
       if (i < this.height - 1) {
         rectangle += '\n';
