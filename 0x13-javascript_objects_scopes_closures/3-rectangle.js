@@ -7,7 +7,7 @@ class Rectangle {
     }
   }
 
-  print() {
+  print () {
     let rectangle = '';
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
@@ -20,9 +20,3 @@ class Rectangle {
     console.log(rectangle);
   }
 }
-
-const r1 = new Rectangle(2, 3);
-r1.print();
-
-const r2 = new Rectangle(10, 5);
-r2.print();
